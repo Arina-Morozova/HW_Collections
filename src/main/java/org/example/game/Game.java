@@ -25,12 +25,12 @@ public class Game {
 
         if (name1 == null) {
             throw new NotRegisteredException(
-                    "Element with name: " + name1.getName() + " not registered "
+                    "Element with name: " + playerName1 + " not registered "
             );
         }
         if (name2 == null) {
             throw new NotRegisteredException(
-                    "Element with name: " + name2.getName() + " not registered "
+                    "Element with name: " + playerName2 + " not registered "
             );
         }
         if (name1.getStrength() > name2.getStrength()) {
