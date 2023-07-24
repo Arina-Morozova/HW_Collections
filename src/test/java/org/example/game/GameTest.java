@@ -74,4 +74,17 @@ public class GameTest {
             manager.round("Sonya_a", "Kolya3");
         });
     }
+
+    @Test
+    public void shouldRoundIfBothPlayersNotRegistered() {
+        Game manager = new Game();
+        manager.register(player1);
+        manager.register(player2);
+        manager.register(player3);
+        manager.register(player4);
+
+        Assertions.assertThrows(NotRegisteredException.class, () -> {
+            manager.round("Sonya_aa", "Kolya3");
+        });
+    }
 }
